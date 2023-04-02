@@ -4,17 +4,22 @@ import HowItWork from "@/components/HowItWork";
 import About from "@/components/About";
 import Header from "@/components/Header";
 import Tweet from "@/components/Tweet";
+import PasteCode from "@/components/PasteCode";
 
 export default function Task() {
   return (
     <>
       <main>
         <Layout>
-          <div className=" bg-bg-img bg-cover lg:bg-contain w-[100%]  ">
+          <div className=" bg-blue-200 lg:bg-contain w-[100%]  ">
             <Header />
           </div>
-          <div className=" bg-bg-img1 bg-cover flex items-end">
+          <div className=" bg-blue-500  flex items-end">
             <Tweet />
+          </div>
+
+          <div>
+            <PasteCode />
           </div>
           {/* <div className=" bg-bg-img1 w-[100%] h-[85vh]">
             <About />

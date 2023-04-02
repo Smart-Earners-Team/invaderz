@@ -21,9 +21,11 @@ const Header = () => {
           <Link href="/mint">Mint</Link>
         </div>
       </div>
-      <div className=" flex flex-col pt-[100px] pb-20 text-white   px-[80px]">
-        <span className=" text-6xl ">The Invaderz</span>
-        <span className=" max-w-[300px] mt-[80px]">
+      <div className=" flex flex-col pt-[100px] pb-20 text-white  px-5 lg:px-[50px]">
+        <span className=" lg:text-6xl text-3xl  shrink-0 mb-5 font-extrabold ">
+          The Invaderz
+        </span>
+        <span className=" lg:max-w-[300px] lg:mt-[20px]">
           Lorem ipsum dolor sit amet consectetur. Risus turpis velit dolor
           egestas. Ut nisi urna quisque tincidunt in diam. Lorem cursus suscipit
           pretium pellentesque. Proin.

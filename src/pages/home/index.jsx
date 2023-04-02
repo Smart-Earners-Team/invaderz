@@ -9,17 +9,11 @@ export default function Home() {
     <>
       <main>
         <Layout>
-          <div className=" bg-bg-img bg-cover lg:bg-contain w-[100%]  ">
+          <div className="bg-blue-200  ">
             <Header />
           </div>
-          <div className=" bg-bg-img1 w-[100%] h-[85vh]">
+          <div className=" bg-blue-500 w-[100%] h-[85vh]">
             <About />
-          </div>
-          <div className=" bg-bg-img2 w-[100%] h-[100vh] mt-2">
-            <HowItWork />
-          </div>
-          <div className=" bg-bg-img3 w-[100%] h-[100vh] mt-2">
-            <Benefit />
           </div>
         </Layout>
       </main>
