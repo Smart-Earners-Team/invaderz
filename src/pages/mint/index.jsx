@@ -19,7 +19,7 @@ const Mint = () => {
           </div>
           <div className="flex items-center justify-between gap-5 text-white">
             <Link href="/home">Home</Link>
-            <Link href="">Task</Link>
+            <Link href="/task">Task</Link>
             <Link href="/mint">Mint</Link>
           </div>
         </div>
@@ -36,14 +36,14 @@ const Mint = () => {
               id="name"
               name="name"
               placeholder="Enter name"
-              className=" bg-transparent border border-white h-10 w-[25%] rounded-md p-3 mt-5"
+              className=" bg-transparent border border-white h-10 lg:w-[25%]  rounded-md p-3 mt-5"
             />
             <input
               type="email"
               id="email"
               name="email"
               placeholder="Enter email address"
-              className=" bg-transparent border border-white h-10 w-[25%] rounded-md p-3 mt-5"
+              className=" bg-transparent border border-white h-10 lg:w-[25%] rounded-md p-3 mt-5"
             />
           </div>
         </div>
