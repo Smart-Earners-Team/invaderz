@@ -2,9 +2,9 @@ import React from "react";
 
 const PasteCode = () => {
   return (
-    <div className=" bg-blue-700  gap-5">
-      <div className=" flex flex-col lg:mx-[16%]  ">
-        <p className=" lg:text-5xl text-2xl text-center lg:mr-[600px] font-bold m-5">
+    <div className=" bg-blue-700 h-[50vh] gap-5 pt-5">
+      <div className="flex flex-col items-center justify-center ">
+        <p className="m-5 mt-5 text-2xl font-bold text-center lg:text-5xl">
           Paste Code
         </p>
         <input
