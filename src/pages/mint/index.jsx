@@ -1,8 +1,9 @@
 "use client";
 import Layout from "@/components/Layout";
 import React, { useEffect, useState } from "react";
-import { Autour_One, Ribeye_Marrow } from "next/font/google";
+import { Autour_One } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import { GoUnmute, GoMute } from "react-icons/go";
 const authour = Autour_One({
   weight: "400",
   subsets: ["latin"],
@@ -50,7 +51,7 @@ const Mint = () => {
           onClick={toggleSound}
           className="fixed p-3 m-3 text-white border-2 rounded-md hover:bg-gray-700 bottom-2 right-5 "
         >
-          {isPlaying ? "OFF Sound" : "ON Sound"}
+          {isPlaying ? <GoMute /> : <GoUnmute />}
         </button>
       </div>
     </Layout>

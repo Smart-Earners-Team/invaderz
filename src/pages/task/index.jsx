@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import Header from "@/components/Header";
 import Tweet from "@/components/Tweet";
 import PasteCode from "@/components/PasteCode";
+import { GoUnmute, GoMute } from "react-icons/go";
 
 export default function Task() {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -51,7 +52,7 @@ export default function Task() {
             onClick={toggleSound}
             className="fixed p-3 m-3 text-white border-2 rounded-md hover:bg-gray-700 bottom-2 right-5 "
           >
-            {isPlaying ? "OFF Sound" : "ON Sound"}
+            {isPlaying ? <GoMute /> : <GoUnmute />}
           </button>
         </Layout>
       </main>

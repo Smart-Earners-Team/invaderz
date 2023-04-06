@@ -24,7 +24,7 @@ const Header = () => {
       viewport={{ once: "false", amount: 0.25 }}
     >
       <Navbar />
-      <div className=" flex flex-col pt-[100px] pb-20 text-white  px-5 lg:px-[50px]">
+      <div className=" flex flex-col lg:pt-[100px] pt-12 pb-12 text-white  px-5 lg:px-[50px]">
         <motion.div
           variants={slideIn("left", "tween", 0.28, 6)}
           className="relative w-full md:-mt-[20px] -mt[12px] "
@@ -35,7 +35,9 @@ const Header = () => {
             TheInvaderz
           </span>
         </motion.div>
-        <span className={`${authour.className} lg:max-w-[500px] lg:mt-[20px]`}>
+        <span
+          className={`${authour.className} lg:max-w-[500px] lg:mt-[20px] text-sm mt-5`}
+        >
           Lorem ipsum dolor sit amet consectetur. Risus turpis velit dolor
           egestas. Ut nisi urna quisque tincidunt in diam. Lorem cursus suscipit
           pretium pellentesque. Proin.

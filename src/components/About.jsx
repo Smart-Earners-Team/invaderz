@@ -18,14 +18,14 @@ const About = () => {
       whileInView="show"
       viewport={{ once: "false", amount: 0.25 }}
     >
-      <div className=" flex flex-col justify-center items-end text-black px-12 pt-6 lg:pt-[100px]">
+      <div className=" flex flex-col justify-center items-end text-black lg:px-12 px-5 pt-6 lg:pt-[100px]">
         <span></span>
         <TitleText
           title={<>About The Invaderz</>}
-          className={`${authour.className} mb-5 text-xl font-extrabold lg:text-8xl shrink-0`}
+          className={`${authour.className} mb-5 text-xl font-extrabold lg:text-8xl shrink-0 mx-auto`}
         />
         <span
-          className={`${authour.className} lg:max-w-[500px] lg:mt-[20px] h-fit text-center`}
+          className={`${authour.className} lg:max-w-[500px] lg:mt-[20px] h-fit text-center mb-3`}
         >
           Lorem ipsum dolor sit amet consectetur. Nec convallis nunc massa
           laoreet. Lorem ipsum dolor sit amet consectetur. Nec convallis nunc

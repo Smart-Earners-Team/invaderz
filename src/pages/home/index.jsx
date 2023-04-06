@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Header from "@/components/Header";
 import Para from "@/components/Para";
 import React, { useEffect, useState } from "react";
+import { GoUnmute, GoMute } from "react-icons/go";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -41,7 +42,7 @@ export default function Home() {
               onClick={toggleSound}
               className="fixed p-3 m-3 text-white border-2 rounded-md hover:bg-gray-700 bottom-2 right-5 "
             >
-              {isPlaying ? "OFF Sound" : "ON Sound"}
+              {isPlaying ? <GoMute /> : <GoUnmute />}
             </button>
           </div>
         </Layout>
