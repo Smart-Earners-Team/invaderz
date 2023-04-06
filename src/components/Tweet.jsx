@@ -16,7 +16,9 @@ const Tweet = () => {
   return (
     <div>
       <div className=" flex flex-col justify-center lg:ml-[750px]">
-        <p className={` ${authour.className} text-5xl p-5 lg:ml-[250px]`}>
+        <p
+          className={` ${authour.className} text-5xl p-5 lg:ml-[250px] mx-auto`}
+        >
           Tweet
         </p>
         <p
@@ -37,7 +39,7 @@ const Tweet = () => {
       </div>
 
       <div className="px-6 ">
-        <button className="bg-blue-700 rounded-xl p-5 text-white font-bold  lg:w-[20%] ml-[100px]   m-3 ">
+        <button className="bg-blue-700 rounded-xl p-5 text-white font-bold  lg:w-[20%] ml-12 lg:ml-[100px]     m-3 ">
           Tweet content
         </button>
         <p className=" text-lg m-3 lg:max-w-[500px] text-center font-bold ">

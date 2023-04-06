@@ -12,7 +12,7 @@ const PasteCode = () => {
           id="name"
           name="name"
           placeholder="Enter code generated here"
-          className=" bg-transparent border border-black h-20 lg:w-[35%] placeholder:text-center placeholder: text-2xl ring-2 ring-white w-[80%] m-3 ml-5 rounded-md p-5 mt-5"
+          className=" bg-transparent border border-black h-12 lg:h-20 lg:w-[35%] placeholder:text-center placeholder: text-2xl ring-2 ring-white w-[80%] m-3 ml-5 rounded-md p-5 mt-5"
         />
 
         <button className="bg-blue-700 rounded-xl text-2xl text-white font-medium p-4  m-3 lg:w-[20%] ">
