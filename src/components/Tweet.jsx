@@ -38,8 +38,17 @@ const Tweet = () => {
         </p>
       </div>
 
-      <div className="px-6 ">
-        <button className="bg-blue-700 rounded-xl p-5 text-white font-bold  lg:w-[20%] ml-12 lg:ml-[100px]     m-3 ">
+      <div className="flex flex-col items-center justify-center md:hidden ">
+        <button className="bg-blue-700 rounded-xl p-5 text-white font-bold  lg:w-[20%]  lg:ml-[100px]     m-3 ">
+          Tweet content
+        </button>
+        <p className=" text-lg m-3 lg:max-w-[500px] text-center font-bold ">
+          Make sure to follow account out account to enable you generate code
+          for the next stage
+        </p>
+      </div>
+      <div className="hidden p-6 md:block">
+        <button className="bg-blue-700 rounded-xl p-5 text-white font-bold  lg:w-[20%]  lg:ml-[100px]     m-3 ">
           Tweet content
         </button>
         <p className=" text-lg m-3 lg:max-w-[500px] text-center font-bold ">
