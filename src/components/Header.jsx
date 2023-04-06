@@ -1,12 +1,8 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
-
 import { Autour_One, Coiny } from "next/font/google";
 import { motion } from "framer-motion";
-
 import { staggerContainer, slideIn } from "../utils/motion";
-import { TypingText, TitleText } from "./CustomTexts";
+import Navbar from "./Navbar";
 
 const authour = Autour_One({
   weight: "400",
@@ -27,22 +23,7 @@ const Header = () => {
       whileInView="show"
       viewport={{ once: "false", amount: 0.25 }}
     >
-      <div className="sticky flex justify-between p-12 px-[60px] top-0 ">
-        <div className="z-[999999]">
-          <Image
-            src="/invadersLogo.jpg"
-            alt="bg"
-            width={500}
-            height={500}
-            className="w-[10%]  "
-          />
-        </div>
-        <div className="flex items-center justify-between gap-5 text-2xl text-white">
-          <Link href="/home">Home</Link>
-          <Link href="/task">WhiteList</Link>
-          <Link href="/mint">Mint</Link>
-        </div>
-      </div>
+      <Navbar />
       <div className=" flex flex-col pt-[100px] pb-20 text-white  px-5 lg:px-[50px]">
         <motion.div
           variants={slideIn("left", "tween", 0.28, 6)}

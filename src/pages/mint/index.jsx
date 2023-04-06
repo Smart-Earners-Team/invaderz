@@ -1,9 +1,13 @@
 "use client";
 import Layout from "@/components/Layout";
-import Image from "next/image";
-import Link from "next/link";
-
 import React, { useEffect, useState } from "react";
+import { Autour_One, Ribeye_Marrow } from "next/font/google";
+import Navbar from "@/components/Navbar";
+const authour = Autour_One({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const Mint = () => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -27,23 +31,10 @@ const Mint = () => {
   return (
     <Layout>
       <div className="bg-gradient-to-r from-[#373B44] to-[#4286f4] bg-center bg-contain ">
-        <div className="sticky flex justify-between p-12 px-[60px] top-0 ">
-          <div>
-            <Image
-              src="/invadersLogo.jpg"
-              alt="bg"
-              width={500}
-              height={500}
-              className="w-[10%] z-[999999999] "
-            />
-          </div>
-          <div className="flex items-center justify-between gap-5 text-2xl text-white">
-            <Link href="/home">Home</Link>
-            <Link href="/task">WhiteList</Link>
-            <Link href="/mint">Mint</Link>
-          </div>
-        </div>
-        <p className="mx-auto mt-5 text-6xl text-center text-white ">
+        <Navbar />
+        <p
+          className={` ${authour.className} mx-auto mt-5 lg:text-9xl text-5xl text-center text-white `}
+        >
           Coming Soon
         </p>
         <div className=" flex flex-col lg:pt-[100px] pt-10 text-white p-5 text-xl   lg:px-[80px]">
