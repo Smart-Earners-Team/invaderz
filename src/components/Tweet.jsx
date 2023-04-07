@@ -43,8 +43,8 @@ const Tweet = () => {
           Tweet content
         </button>
         <p className=" text-lg m-3 lg:max-w-[500px] text-center font-bold ">
-          Make sure to follow account out account to enable you generate code
-          for the next stage
+          Make sure to follow our account to enable you generate code for the
+          next stage
         </p>
       </div>
       <div className="hidden p-6 md:block">
