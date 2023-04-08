@@ -36,18 +36,6 @@ export default function Task() {
             <Tweet />
           </div>
 
-          <div className="mx-auto">
-            <PasteCode />
-          </div>
-          {/* <div className=" bg-bg-img1 w-[100%] h-[85vh]">
-            <About />
-          </div>
-          <div className=" bg-bg-img2 w-[100%] h-[100vh] mt-2">
-            <HowItWork />
-          </div>
-          <div className=" bg-bg-img3 w-[100%] h-[100vh] mt-2">
-            <Benefit />
-          </div> */}
           <button
             onClick={toggleSound}
             className="fixed p-3 m-3 text-white border-2 rounded-md hover:bg-gray-700 bottom-2 right-5 "

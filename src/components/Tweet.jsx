@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState, useMemo } from "react";
 import { Autour_One, Ribeye_Marrow } from "next/font/google";
+import CustomModal from "./CustomModal";
 import { nanoid } from "nanoid";
 
 const authour = Autour_One({
@@ -14,7 +15,7 @@ const ribeye = Ribeye_Marrow({
   display: "swap",
 });
 
-function ActionTweet({ setVerify }) {
+function ActionTweet({}) {
   const model = nanoid();
   // const { address } = useAccount();
   const [userCID, updateCID] = useState();
@@ -22,12 +23,27 @@ function ActionTweet({ setVerify }) {
   const [formErr, setFormErr] = useState("");
   const [isValid, setIsvalid] = useState(false);
   const [tweetLink, setTweetLink] = useState();
+  const [showModal, setShowModal] = useState(false);
+  const [retrievedUserID, setRetrievedUserID] = useState(null);
+  const [isVerified, setIsVerified] = useState(false);
 
   useEffect(() => {
     const CID = localStorage.getItem("coremunity");
     const Data = JSON.parse(CID);
     if (CID && Data?.CID != undefined) {
       updateCID(Data.CID);
+      setRetrievedUserID(Data.CID); // Set the retrieved user ID
+    } else {
+      updateCID(model);
+    }
+  }, []);
+
+  useEffect(() => {
+    const CID = localStorage.getItem("coremunity");
+    const Data = JSON.parse(CID);
+    if (CID && Data?.CID != undefined) {
+      updateCID(Data.CID);
+      setIsVerified(Data.verified); // Retrieve isVerified state from local storage
     } else {
       updateCID(model);
     }
@@ -35,7 +51,10 @@ function ActionTweet({ setVerify }) {
 
   const twitterLink = useMemo(() => {
     const prefix = "https://twitter.com/intent/tweet?text=";
-    const url = `I identify as a Theinvaderz #COmmunity🌟 member @theinvaderz\n\n CID: ${userCID} \n\nhttps:///Theinvaderz.lol/early/${userCID}\n\n#TheinvaderzCommunity #Community #Twitter`;
+    const url = `@TheInvaderz_ I accept.
+    \nAcceptance_Code:_ ${userCID} \n\n My determination is unbreakable, my courage unwavering. I'll defend Earth with all my might. Stand with me?\n
+    🔗https://theinvaderz.zone/?code=${userCID}\n
+    #TheyAreComing #EthereumNFT`;
     return prefix + encodeURIComponent(url);
   }, [userCID]);
 
@@ -64,7 +83,14 @@ function ActionTweet({ setVerify }) {
   };
 
   const HandleVerify = () => {
-    setFormErr(validate(tweetLink));
+    const validationResult = validate(tweetLink);
+    setFormErr(validationResult);
+
+    if (Object.keys(validationResult).length === 0) {
+      setShowModal(true);
+      setIsVerified(true); // Set isVerified to true
+    }
+
     setIsvalid(true);
   };
 
@@ -77,44 +103,59 @@ function ActionTweet({ setVerify }) {
           verified: true,
         })
       );
-      setVerify(true);
-      // switchTweeted();
     }
   }, [isValid, formErr]);
 
   return (
     <div className="flex flex-col items-center justify-center w-full my-5 ">
+      {retrievedUserID && (
+        <p className="p-10 text-sm text-black bg-blue-200 lg:text-xl rounded-xl ">
+          Welcome back! Your User ID:{" "}
+          <p className="mt-3 font-serif text-black animate-bounce">
+            {retrievedUserID}
+          </p>
+        </p>
+      )}
+
       {madeTweet && (
         <div className="flex flex-col items-center w-full">
           <input
             onChange={(e) => setTweetLink(e.target.value)}
-            placeholder="Enter your tweet link"
             type="link"
-            className="sm:w-[360px] w-[159px] p-2 rounded-lg placeholder:text-center"
+            placeholder="Enter code generated here"
+            className=" bg-transparent border border-black h-12 lg:h-20 lg:w-[35%] placeholder:text-center lg:placeholder:text-2xl ring-2 ring-white w-[80%] m-3 ml-5 rounded-md p-5 mt-5"
           ></input>
           <p className="justify-center p-0 m-0 text-xs text-center text-red-600">
             {formErr.tweetLink}
           </p>
           <button
             onClick={HandleVerify}
-            className="rounded-lg border px-4 py-2 text-xl text-white bg-blue-700 text-center hover:scale-125 my-4"
+            className="px-4 py-2 my-4 text-xl text-center text-white bg-blue-700 border rounded-lg hover:scale-125"
           >
             Verify Tweet
           </button>
           <p className="text-xl text-blue-800">
             If you have not tweeted, tweet first.
           </p>
+
+          <CustomModal
+            message="Your planet thanks you. You have been chosen"
+            showModal={showModal}
+            closeModal={() => setShowModal(false)}
+          />
         </div>
       )}
-      <div className="flex flex-col items-center justify-center  ">
-        <a
-          onClick={HandleCacheID}
-          href={twitterLink}
-          target="_blank"
-          className="bg-blue-700 rounded-xl p-5 text-white font-bold  lg:w-[40%] text-center   m-3 "
-        >
-          Tweet content
-        </a>
+      <div className="flex flex-col items-center justify-center ">
+        {!isVerified && (
+          <a
+            onClick={HandleCacheID}
+            href={twitterLink}
+            target="_blank"
+            className="bg-blue-700 rounded-xl p-5 text-white font-bold  lg:w-[40%] text-center   m-3 "
+          >
+            Tweet content
+          </a>
+        )}
         <p className=" text-lg m-3 lg:max-w-[500px] text-center font-bold ">
           Make sure to follow our account to enable you generate code for the
           next stage
@@ -125,45 +166,3 @@ function ActionTweet({ setVerify }) {
 }
 
 export default ActionTweet;
-
-// import React from "react";
-// import { Autour_One, Ribeye_Marrow } from "next/font/google";
-
-// const authour = Autour_One({
-//   weight: "400",
-//   subsets: ["latin"],
-//   display: "swap",
-// });
-// const ribeye = Ribeye_Marrow({
-//   weight: "400",
-//   subsets: ["latin"],
-//   display: "swap",
-// });
-
-// const Tweet = () => {
-//   return (
-//
-
-//       <div className="flex flex-col items-center justify-center md:hidden ">
-//         <button className="bg-blue-700 rounded-xl p-5 text-white font-bold  lg:w-[20%]  lg:ml-[100px]     m-3 ">
-//           Tweet content
-//         </button>
-//         <p className=" text-lg m-3 lg:max-w-[500px] text-center font-bold ">
-//           Make sure to follow our account to enable you generate code for the
-//           next stage
-//         </p>
-//       </div>
-//       <div className="hidden p-6 md:block">
-//         <button className="bg-blue-700 rounded-xl p-5 text-white font-bold  lg:w-[20%]  lg:ml-[100px]     m-3 ">
-//           Tweet content
-//         </button>
-//         <p className=" text-lg m-3 lg:max-w-[500px] text-center font-bold ">
-//           Make sure to follow account out account to enable you generate code
-//           for the next stage
-//         </p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Tweet;
