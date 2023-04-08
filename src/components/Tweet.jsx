@@ -51,10 +51,7 @@ function ActionTweet({}) {
 
   const twitterLink = useMemo(() => {
     const prefix = "https://twitter.com/intent/tweet?text=";
-    const url = `@TheInvaderz_ I accept.
-    \nAcceptance_Code:_ ${userCID} \n\n My determination is unbreakable, my courage unwavering. I'll defend Earth with all my might. Stand with me?\n
-    🔗https://theinvaderz.zone/?code=${userCID}\n
-    #TheyAreComing #EthereumNFT`;
+    const url = `@TheInvaderz_ I accept\n\n$Acceptance code:${userCID}\n\nMy determination is unbreakable, my courage unwavering. I will defend this planet with all my might. Will you stand with me against the horde?\n\n🔗 https://TheInvaderz.zone/?code=${userCID}\n\n#TheyAreComing #EthereumNFT`;
     return prefix + encodeURIComponent(url);
   }, [userCID]);
 
