@@ -102,7 +102,7 @@ function ActionTweet({ setVerify }) {
             Verify Tweet
           </button>
           <p className="text-xl text-blue-800">
-            If you have not tweeted, tweet first
+            If you have not tweeted, tweet first.
           </p>
         </div>
       )}
