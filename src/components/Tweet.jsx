@@ -1,23 +1,11 @@
 "use client";
+
 import React, { useEffect, useState, useMemo } from "react";
-import { Autour_One, Ribeye_Marrow } from "next/font/google";
 import CustomModal from "./CustomModal";
 import { nanoid } from "nanoid";
 
-const authour = Autour_One({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-const ribeye = Ribeye_Marrow({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 function ActionTweet({}) {
   const model = nanoid();
-  // const { address } = useAccount();
   const [userCID, updateCID] = useState();
   const [madeTweet, updateTweeterStatus] = useState();
   const [formErr, setFormErr] = useState("");
@@ -34,28 +22,18 @@ function ActionTweet({}) {
   }, [userCID]);
 
   useEffect(() => {
-    const CID = localStorage.getItem("coremunity");
+    const CID = localStorage.getItem("theinvaders");
     const Data = JSON.parse(CID);
     if (CID && Data?.CID != undefined) {
       updateCID(Data.CID);
-      setRetrievedUserID(Data.CID); // Set the retrieved user ID
+      setRetrievedUserID(Data.CID);
+      setIsVerified(Data.verified);
     } else {
       updateCID(model);
     }
   }, []);
 
-  useEffect(() => {
-    const CID = localStorage.getItem("coremunity");
-    const Data = JSON.parse(CID);
-    if (CID && Data?.CID != undefined) {
-      updateCID(Data.CID);
-      setIsVerified(Data.verified); // Retrieve isVerified state from local storage
-    } else {
-      updateCID(model);
-    }
-  }, []);
-
-  function HandleCacheID() {
+  function handleCacheID() {
     localStorage.setItem(
       "theinvaders",
       JSON.stringify({
@@ -65,47 +43,50 @@ function ActionTweet({}) {
     );
     updateTweeterStatus(true);
   }
-
   useEffect(() => {
     if (Object.keys(formErr).length === 0 && isValid) {
       localStorage.setItem(
-        "coremunity",
+        "theinvaders",
         JSON.stringify({
           CID: userCID,
           verified: true,
         })
       );
+      setRetrievedUserID(userCID);
+    }
+  }, [isValid, formErr]);
+
+  const validate = (tweetLink) => {
+    const errors = {};
+    const res = tweetLink.match(
+      /(http(s)?:\/\/.)?(www\.)?twitter\.com\/([-a-zA-Z0-9@:%_\+.~#?&//=]*)\/status\/([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
+    );
+    if (!tweetLink) {
+      errors.tweetLink = "Tweet link is required.";
+    } else if (res == null) {
+      errors.tweetLink = "Please provide a valid tweet link";
+    }
+    return errors;
+  };
+
+  const handleVerify = () => {
+    const validationResult = validate(tweetLink);
+    setFormErr(validationResult);
+
+    if (Object.keys(validationResult).length === 0) {
+      setShowModal(true);
     }
 
-    const validate = (tweetLink) => {
-      const errors = {};
-      const res = tweetLink.match(
-        /(http(s)?:\/\/.)?(www\.)?twitter\.com\/([-a-zA-Z0-9@:%_\+.~#?&//=]*)\/status\/([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
-      );
-      if (!tweetLink) {
-        errors.tweetLink = "Tweet link is required.";
-      } else if (res == null) {
-        errors.tweetLink = "Please provide a valid tweet link";
-      }
-      return errors;
-    };
+    setIsvalid(true);
+  };
 
-    const HandleVerify = () => {
-      const validationResult = validate(tweetLink);
-      setFormErr(validationResult);
-
-      if (Object.keys(validationResult).length === 0) {
-        setShowModal(true);
-        setIsVerified(true); // Set isVerified to true
-      }
-
-      setIsvalid(true);
-    };
-  }, [isValid, formErr]);
+  const handleModalClose = () => {
+    setIsVerified(true);
+  };
 
   return (
     <div className="flex flex-col items-center justify-center w-full my-5 ">
-      {retrievedUserID && (
+      {isVerified && (
         <p className="p-10 text-sm text-black bg-blue-200 lg:text-xl rounded-xl ">
           Welcome back! Your User ID:{" "}
           <p className="mt-3 font-serif text-black animate-bounce">
@@ -114,7 +95,7 @@ function ActionTweet({}) {
         </p>
       )}
 
-      {madeTweet && (
+      {madeTweet && !isVerified && (
         <div className="flex flex-col items-center w-full">
           <input
             onChange={(e) => setTweetLink(e.target.value)}
@@ -126,7 +107,7 @@ function ActionTweet({}) {
             {formErr.tweetLink}
           </p>
           <button
-            onClick={HandleVerify}
+            onClick={handleVerify}
             className="px-4 py-2 my-4 text-xl text-center text-white bg-blue-700 border rounded-lg hover:scale-125"
           >
             Verify-Tweet
@@ -139,13 +120,14 @@ function ActionTweet({}) {
             message="Your planet thanks you. You have been chosen"
             showModal={showModal}
             closeModal={() => setShowModal(false)}
+            handleClose={handleModalClose}
           />
         </div>
       )}
       <div className="flex flex-col items-center justify-center ">
         {!isVerified && (
           <a
-            onClick={HandleCacheID}
+            onClick={handleCacheID}
             href={twitterLink}
             target="_blank"
             className="bg-blue-700 rounded-xl p-5 text-white font-bold  lg:w-[40%] text-center   m-3 "

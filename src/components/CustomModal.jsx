@@ -1,5 +1,5 @@
 import React from "react";
-const CustomModal = ({ message, showModal, closeModal }) => {
+const CustomModal = ({ message, showModal, closeModal, handleClose }) => {
   if (!showModal) {
     return null;
   }
@@ -9,7 +9,10 @@ const CustomModal = ({ message, showModal, closeModal }) => {
         <h2 className="mb-4 text-xl">{message}</h2>
         <button
           className="px-4 py-2 text-white bg-blue-500 rounded"
-          onClick={closeModal}
+          onClick={() => {
+            closeModal();
+            handleClose();
+          }}
         >
           Close
         </button>
