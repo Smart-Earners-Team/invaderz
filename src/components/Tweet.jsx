@@ -27,6 +27,12 @@ function ActionTweet({}) {
   const [retrievedUserID, setRetrievedUserID] = useState(null);
   const [isVerified, setIsVerified] = useState(false);
 
+  const twitterLink = useMemo(() => {
+    const prefix = "https://twitter.com/intent/tweet?text=";
+    const url = `@TheInvaderz_ I accept\n\nAcceptance code: ${userCID}\n\nMy determination is unbreakable, my courage unwavering. I will defend this planet with all my might. Will you stand with me against the horde?\n\n🔗 https://TheInvaderz.zone/?code=${userCID}\n\n#TheyAreComing #EthereumNFT`;
+    return prefix + encodeURIComponent(url);
+  }, [userCID]);
+
   useEffect(() => {
     const CID = localStorage.getItem("coremunity");
     const Data = JSON.parse(CID);
@@ -49,12 +55,6 @@ function ActionTweet({}) {
     }
   }, []);
 
-  const twitterLink = useMemo(() => {
-    const prefix = "https://twitter.com/intent/tweet?text=";
-    const url = `@TheInvaderz_ I accept\n\nAcceptance code: ${userCID}\n\nMy determination is unbreakable, my courage unwavering. I will defend this planet with all my might. Will you stand with me against the horde?\n\n🔗 https://TheInvaderz.zone/?code=${userCID}\n\n#TheyAreComing #EthereumNFT`;
-    return prefix + encodeURIComponent(url);
-  }, [userCID]);
-
   function HandleCacheID() {
     localStorage.setItem(
       "theinvaders",
@@ -66,31 +66,6 @@ function ActionTweet({}) {
     updateTweeterStatus(true);
   }
 
-  const validate = (tweetLink) => {
-    const errors = {};
-    const res = tweetLink.match(
-      /(http(s)?:\/\/.)?(www\.)?twitter\.com\/([-a-zA-Z0-9@:%_\+.~#?&//=]*)\/status\/([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
-    );
-    if (!tweetLink) {
-      errors.tweetLink = "Tweet link is required.";
-    } else if (res == null) {
-      errors.tweetLink = "Please provide a valid tweet link";
-    }
-    return errors;
-  };
-
-  const HandleVerify = () => {
-    const validationResult = validate(tweetLink);
-    setFormErr(validationResult);
-
-    if (Object.keys(validationResult).length === 0) {
-      setShowModal(true);
-      setIsVerified(true); // Set isVerified to true
-    }
-
-    setIsvalid(true);
-  };
-
   useEffect(() => {
     if (Object.keys(formErr).length === 0 && isValid) {
       localStorage.setItem(
@@ -101,6 +76,31 @@ function ActionTweet({}) {
         })
       );
     }
+
+    const validate = (tweetLink) => {
+      const errors = {};
+      const res = tweetLink.match(
+        /(http(s)?:\/\/.)?(www\.)?twitter\.com\/([-a-zA-Z0-9@:%_\+.~#?&//=]*)\/status\/([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
+      );
+      if (!tweetLink) {
+        errors.tweetLink = "Tweet link is required.";
+      } else if (res == null) {
+        errors.tweetLink = "Please provide a valid tweet link";
+      }
+      return errors;
+    };
+
+    const HandleVerify = () => {
+      const validationResult = validate(tweetLink);
+      setFormErr(validationResult);
+
+      if (Object.keys(validationResult).length === 0) {
+        setShowModal(true);
+        setIsVerified(true); // Set isVerified to true
+      }
+
+      setIsvalid(true);
+    };
   }, [isValid, formErr]);
 
   return (
@@ -129,7 +129,7 @@ function ActionTweet({}) {
             onClick={HandleVerify}
             className="px-4 py-2 my-4 text-xl text-center text-white bg-blue-700 border rounded-lg hover:scale-125"
           >
-            Verify Tweet
+            Verify-Tweet
           </button>
           <p className="text-xl text-blue-800">
             If you have not tweeted, tweet first.
