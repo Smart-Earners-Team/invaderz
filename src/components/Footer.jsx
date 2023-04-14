@@ -5,8 +5,10 @@ const Footer = () => {
   return (
     <div className="bg-blue-800 flex flex-col items-center justify-center h-[50vh] text-white">
       <p className=" lg:text-5xl text-2xl font-bold mb-5">The Invaderz</p>
-      <p className=" mx-5 text-center">
-        Lorem ipsum dolor sit amet consectetur. Ut ullamcorper nibh fring
+      <p className=" mx-5 text-center max-w-3xl">
+        The Invaderz NFT project represents a groundbreaking new approach to
+        storytelling and NFT collectibles, and is sure to be an intriguing and
+        exciting experience for all involved.
       </p>
 
       <div className="flex items-center justify-center gap-5 mt-10 ">

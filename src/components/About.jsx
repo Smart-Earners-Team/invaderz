@@ -27,27 +27,21 @@ const About = () => {
         <span
           className={`${authour.className} lg:max-w-[500px] lg:mt-[20px] h-fit text-center mb-3`}
         >
-          The Invaderz NFT project is a unique and interactive concept that
-          places the power of storytelling in the hands of the NFT holders. The
-          project consists of a series of NFTs that each represent a different
-          character or aspect of the alien invasion narrative. As the story
-          progresses, the NFT holders will have the opportunity to vote on
-          different choices that will affect the direction of the storyline.
-          Each NFT will come with its own set of traits and abilities, which
-          will be important in determining the outcome of certain events. For
-          example, an NFT that represents a military personnel might be more
-          effective in combat scenarios, while an NFT that represents a diplomat
-          might be better suited for handling community progression storylines.
-          As the story progresses, the choices made by the NFT holders will be
-          compiled and used to determine the next stage of the narrative. This
-          means that the story will be shaped by the collective decisions of the
-          NFT holders, creating a truly unique and interactive storytelling
-          experience In addition to the storytelling aspect, the NFTs themselves
-          will be valuable and collectible items. Each NFT will be unique, with
-          its own set of traits and abilities, and will be tradable on various
-          NFT marketplaces. Overall, the Invaderz NFT project represents a
-          groundbreaking new approach to storytelling and NFT collectibles, and
-          is sure to be an intriguing and exciting experience for all involved.
+          As the story progresses, the NFT holders will have the opportunity to
+          vote on different choices that will affect the direction of the
+          storyline. Each NFT will come with its own set of traits and
+          abilities, which will be important in determining the outcome of
+          certain events. For example, an NFT that represents a military
+          personnel might be more effective in combat scenarios, while an NFT
+          that represents a diplomat might be better suited for handling
+          community progression storylines. As the story progresses, the choices
+          made by the NFT holders will be compiled and used to determine the
+          next stage of the narrative. This means that the story will be shaped
+          by the collective decisions of the NFT holders, creating a truly
+          unique and interactive storytelling experience In addition to the
+          storytelling aspect, the NFTs themselves will be valuable and
+          collectible items. Each NFT will be unique, with its own set of traits
+          and abilities, and will be tradable on various NFT marketplaces.
         </span>
       </div>
     </motion.div>

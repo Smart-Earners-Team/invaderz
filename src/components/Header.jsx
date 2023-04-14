@@ -38,9 +38,10 @@ const Header = () => {
         <span
           className={`${authour.className} lg:max-w-[500px] lg:mt-[20px] text-sm mt-5`}
         >
-          Lorem ipsum dolor sit amet consectetur. Risus turpis velit dolor
-          egestas. Ut nisi urna quisque tincidunt in diam. Lorem cursus suscipit
-          pretium pellentesque. Proin.
+          The Invaderz NFT project is a unique and interactive concept that
+          places the power of storytelling in the hands of the NFT holders. The
+          project consists of a series of NFTs that each represent a different
+          character or aspect of the alien invasion narrative.
         </span>
       </div>
     </motion.div>
