@@ -5,6 +5,7 @@ import Header from "@/components/AboutHeaders";
 import Tweet from "@/components/Tweet";
 import PasteCode from "@/components/PasteCode";
 import { GoUnmute, GoMute } from "react-icons/go";
+import Image from "next/image";
 
 export default function Task() {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -29,19 +30,28 @@ export default function Task() {
     <>
       <main>
         <Layout>
-          <div className="bg-gradient-to-r from-[#373B44] to-[#4286f4] lg:bg-contain w-[100%]  ">
-            <Header />
-          </div>
-          <div className="flex items-end bg-blue-500 ">
-            <Tweet />
-          </div>
+          <Image
+            src="/bg/bg-task.png"
+            alt="Twitter"
+            width={1000}
+            height={1000}
+            className=" absolute w-[100%] h-[200vh] object-cover z-[-99999]  "
+          />
+          <div>
+            <div className="  ">
+              <Header />
+            </div>
+            <div className="flex items-end ">
+              <Tweet />
+            </div>
 
-          <button
-            onClick={toggleSound}
-            className="fixed p-3 m-3 text-white border-2 rounded-md hover:bg-gray-700 bottom-2 right-5 "
-          >
-            {isPlaying ? <GoMute /> : <GoUnmute />}
-          </button>
+            <button
+              onClick={toggleSound}
+              className="fixed p-3 m-3 text-white border-2 rounded-md hover:bg-gray-700 bottom-2 right-5 "
+            >
+              {isPlaying ? <GoMute /> : <GoUnmute />}
+            </button>
+          </div>
         </Layout>
       </main>
     </>

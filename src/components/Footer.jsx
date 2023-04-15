@@ -3,7 +3,14 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className=" relative bg-blue-800 flex flex-col items-center justify-center h-[60vh] text-white">
+    <div className=" relative flex flex-col items-center justify-center h-[60vh] text-white">
+      <Image
+        src="/bg/bg-footer.webp"
+        alt="Twitter"
+        width={1000}
+        height={1000}
+        className=" absolute w-[100%] h-[80vh]  object-cover z-[-99999] opacity-50  "
+      />
       <p className=" lg:text-5xl text-2xl font-bold mb-5">The Invaderz</p>
       <p className=" mx-5 text-center max-w-3xl z-[99] ">
         The Invaderz NFT project represents a groundbreaking new approach to
@@ -40,7 +47,7 @@ const Footer = () => {
           alt="Twitter"
           width={1000}
           height={1000}
-          className=" absolute lg:w-[20%] w-[50%] right-0  bottom-[2px] opacity-50 "
+          className=" absolute lg:w-[20%] w-[50%] right-0  bottom-[10px] opacity-50 "
         />
       </div>
     </div>
