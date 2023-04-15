@@ -46,17 +46,22 @@ const About = () => {
         </span>
 
         <div>
-          <TitleText
-            title={
-              <Image
-                src="/sides/tweet2.png"
-                alt="spaceShip"
-                width={1000}
-                height={1000}
-                className=" absolute hidden lg:block "
-              />
-            }
-          />
+          <motion.div
+            variants={slideIn("left", "tween", 0.2, 3)}
+            className=" absolute lg:w-[50%] w-[100%] right-0 lg:top-[100px] top-[150px]"
+          >
+            <TitleText
+              title={
+                <Image
+                  src="/sides/tweet2.png"
+                  alt="ghost"
+                  width={1000}
+                  height={1000}
+                  className="  opacity-80"
+                />
+              }
+            />
+          </motion.div>
         </div>
       </div>
     </motion.div>
