@@ -1,9 +1,10 @@
 "use client";
 import Layout from "@/components/Layout";
 import React, { useEffect, useState } from "react";
-import { Autour_One } from "next/font/google";
+import { Autour_One, Coming_Soon } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { GoUnmute, GoMute } from "react-icons/go";
+
 const authour = Autour_One({
   weight: "400",
   subsets: ["latin"],
@@ -47,9 +48,10 @@ const Mint = () => {
             Follow
           </div>
         </div>
+
         <button
           onClick={toggleSound}
-          className="fixed p-3 m-3 text-white border-2 rounded-md hover:bg-gray-700 bottom-2 right-5 "
+          className="fixed z-[99999999] p-3 m-3 text-white border-2 rounded-md hover:bg-gray-700 bottom-2 right-5 "
         >
           {isPlaying ? <GoMute /> : <GoUnmute />}
         </button>

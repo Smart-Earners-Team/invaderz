@@ -40,7 +40,7 @@ const Header = () => {
         </span>
 
         <motion.div
-          variants={slideIn("left", "tween", 0.35)}
+          variants={slideIn("left", "tween", 0.2, 4)}
           className=" absolute lg:w-[20%] w-[70%] left-0 lg:top-[280px] top-[150px]"
         >
           <TitleText

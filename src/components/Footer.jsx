@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
         <div>
           <motion.div
-            variants={slideIn("left", "tween", 0.3, 7)}
+            variants={slideIn("left", "tween", 0.2, 6)}
             className="absolute lg:w-[20%] w-[70%] left-0 bottom-[10px]"
           >
             <TitleText

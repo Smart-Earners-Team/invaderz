@@ -9,7 +9,7 @@ export default function Home() {
   const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
-    const audio = new Audio("/homeaudio.mp3");
+    const audio = new Audio("/otheraudio.mp3");
     audio.loop = true;
     if (isPlaying) {
       audio.play();
@@ -47,7 +47,7 @@ export default function Home() {
 
               <button
                 onClick={toggleSound}
-                className="fixed p-3 m-3 text-white border-2 rounded-md hover:bg-gray-700 bottom-2 right-5 "
+                className="fixed z-[99999999] p-3 m-3 text-white border-2 rounded-md hover:bg-gray-700 bottom-2 right-5 "
               >
                 {isPlaying ? <GoMute /> : <GoUnmute />}
               </button>

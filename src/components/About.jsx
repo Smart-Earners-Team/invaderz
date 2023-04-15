@@ -53,7 +53,7 @@ const About = () => {
                 alt="spaceShip"
                 width={1000}
                 height={1000}
-                className=" absolute "
+                className=" absolute hidden lg:block "
               />
             }
           />

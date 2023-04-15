@@ -50,7 +50,7 @@ export default function Home() {
             <div className="">
               <button
                 onClick={toggleSound}
-                className="fixed p-3 m-3 text-white border-2 rounded-md hover:bg-gray-700 bottom-2 right-5 "
+                className="fixed z-[99999999] p-3 m-3 text-white border-2 rounded-md hover:bg-gray-700 bottom-2 right-5 "
               >
                 {isPlaying ? <GoMute /> : <GoUnmute />}
               </button>
