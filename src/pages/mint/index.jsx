@@ -31,7 +31,7 @@ const Mint = () => {
   };
   return (
     <Layout>
-      <div className="bg-gradient-to-r from-[#373B44] to-[#4286f4] bg-center bg-contain ">
+      <div className=" bg-bg-mint w-full h-screen bg-cover bg-no-repeat">
         <Navbar />
         <p
           className={` ${authour.className} mx-auto mt-5 lg:text-9xl text-5xl text-center text-white `}

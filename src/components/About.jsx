@@ -19,7 +19,7 @@ const About = () => {
       whileInView="show"
       viewport={{ once: "false", amount: 0.25 }}
     >
-      <div className="  flex flex-col justify-center z-[-9999]  text-black  lg:px-12 px-5 pt-6 lg:pt-[100px] bg-bg-imgAbout object-contain">
+      <div className=" relative bg-bg-about flex flex-col justify-center z-[-9999]  text-black  lg:px-12 px-5 pt-6 lg:pt-[100px] object-contain">
         <span></span>
         <TitleText
           title={<>About TheInvaderz</>}
@@ -46,18 +46,17 @@ const About = () => {
         </span>
 
         <div>
-          {/* <TitleText
+          <TitleText
             title={
               <Image
                 src="/sides/tweet2.png"
-                alt="Twitter"
+                alt="spaceShip"
                 width={1000}
                 height={1000}
-                className=" opacity-50"
+                className=" absolute "
               />
             }
-            className="absolute lg:w-[40%] top-[180px] w-[100%] left-[0%] lg:left-[27%]  "
-          /> */}
+          />
         </div>
       </div>
     </motion.div>
