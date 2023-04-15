@@ -53,7 +53,7 @@ const Header = () => {
             alt="Twitter"
             width={1000}
             height={1000}
-            className=" opacity-50"
+            className=" absolute opacity-50"
           />
         </motion.div>
       </div>

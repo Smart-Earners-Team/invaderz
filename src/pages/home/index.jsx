@@ -33,17 +33,18 @@ export default function Home() {
       <main>
         <Layout>
           <div className=" ">
-            <div className=" relative">
+            {" "}
+            <div className="relative">
               <Image
                 src="/bg/bg-home.jpg"
                 alt="Twitter"
                 width={1000}
                 height={1000}
-                className=" absolute w-[100%] object-cover z-[-91]  "
+                className="absolute top-0 left-0 w-full h-full object-cover z-[-91]"
               />
               <Header />
             </div>
-            <div className="relative ">
+            <div className=" ">
               <About />
             </div>
             <div className="">
