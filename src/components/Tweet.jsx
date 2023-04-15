@@ -126,7 +126,7 @@ function ActionTweet({}) {
           />
         </div>
       )}
-      <div className=" relative flex flex-col items-center justify-center h-[50vh] ">
+      <div className=" relative flex flex-col items-center justify-center ">
         <TitleText
           title={
             <Image
@@ -149,7 +149,7 @@ function ActionTweet({}) {
             Tweet content
           </a>
         )}
-        <p className=" text-lg m-3 lg:max-w-[500px] text-center text-white font-extrabold mt-8 ">
+        <p className=" text-lg m-3 lg:max-w-[500px] text-center text-white font-extrabold ">
           Make sure to follow our account to enable you generate code for the
           next stage
         </p>

@@ -29,7 +29,7 @@ export default function Home() {
     <>
       <main>
         <Layout>
-          <div className="relative w-full h-screen overflow-hidden">
+          <div className="relative w-full lg:h-[150vh] h-screen overflow-hidden">
             <Image
               src="/bg/bg-task.jpg"
               alt="Ghost"
@@ -41,7 +41,7 @@ export default function Home() {
               <div className="  ">
                 <Header />
               </div>
-              <div className="flex items-end ">
+              <div className="flex items-end lg:mt-20 ">
                 <Tweet />
               </div>
 

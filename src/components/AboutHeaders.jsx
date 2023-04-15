@@ -21,7 +21,7 @@ const Header = () => {
       viewport={{ once: "false", amount: 0.25 }}
     >
       <Navbar />
-      <div className=" flex flex-col lg:pt-[50px] pt-12 pb-[200px] text-white  px-5 lg:px-[50px] lg:ml-[100px]">
+      <div className=" flex flex-col lg:pt-[50px] pt-12  text-white  px-5 lg:px-[50px] lg:ml-[100px]">
         {/* <motion.div
           variants={slideIn("left", "tween", 0.2, 3)}
           className="relative w-full md:-mt-[20px] -mt[12px] "
