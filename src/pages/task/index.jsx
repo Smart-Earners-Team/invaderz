@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Layout from "@/components/Layout";
-import Header from "@/components/Header";
+import Header from "@/components/AboutHeaders";
 import Tweet from "@/components/Tweet";
 import PasteCode from "@/components/PasteCode";
 import { GoUnmute, GoMute } from "react-icons/go";

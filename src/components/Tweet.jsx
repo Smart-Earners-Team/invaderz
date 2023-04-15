@@ -3,6 +3,8 @@
 import React, { useEffect, useState, useMemo } from "react";
 import CustomModal from "./CustomModal";
 import { nanoid } from "nanoid";
+import { TitleText } from "./CustomTexts";
+import Image from "next/image";
 
 function ActionTweet({}) {
   const model = nanoid();
@@ -124,13 +126,25 @@ function ActionTweet({}) {
           />
         </div>
       )}
-      <div className="flex flex-col items-center justify-center ">
+      <div className=" relative flex flex-col items-center justify-center h-[50vh] ">
+        <TitleText
+          title={
+            <Image
+              src="/sides/tweet2.png"
+              alt="Twitter"
+              width={1000}
+              height={1000}
+              className=" opacity-[40%] "
+            />
+          }
+          className="absolute lg:w-[120%] w-[100%] "
+        />
         {!isVerified && (
           <a
             onClick={handleCacheID}
             href={twitterLink}
             target="_blank"
-            className="bg-blue-700 rounded-xl p-5 text-white font-bold  lg:w-[40%] text-center   m-3 "
+            className="bg-blue-700 z-[99] hover:bg-blue-600 rounded-xl p-5 text-white font-bold  lg:w-[40%] text-center   m-3 "
           >
             Tweet content
           </a>
