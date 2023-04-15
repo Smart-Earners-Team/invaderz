@@ -44,21 +44,16 @@ const Footer = () => {
           />
         </div>
         <div>
-          <motion.div
-            variants={slideIn("right", "tween", 0.3, 7)}
-            className="absolute lg:w-[20%] w-[70%] right-0 bottom-[10px]"
-          >
-            <TitleText
-              title={
-                <Image
-                  src="/sides/footer1.png"
-                  alt="Twitter"
-                  width={1000}
-                  height={1000}
-                />
-              }
-            />
-          </motion.div>
+          <TitleText
+            title={
+              <Image
+                src="/sides/footer1.png"
+                alt="Twitter"
+                width={1000}
+                height={1000}
+              />
+            }
+          />
         </div>
       </footer>
     </motion.div>

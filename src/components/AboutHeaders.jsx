@@ -31,7 +31,7 @@ const Header = () => {
           className={`${rock.className} mb-5 text-xl font-extrabold lg:text-8xl lg:ml-[20px] shrink-0`}
         />
         <span
-          className={`${rock.className} lg:max-w-[800px] lg:mt-[20px] lg:ml-[10px] text-sm mt-5 p-2 rounded-md bg-gray-500`}
+          className={`${rock.className} lg:max-w-[800px] lg:mt-[20px] lg:ml-[10px] text-sm mt-5 p-2 `}
         >
           The Invaderz NFT project is a unique and interactive concept that
           places the power of storytelling in the hands of the NFT holders. The
