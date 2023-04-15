@@ -149,7 +149,7 @@ function ActionTweet({}) {
             Tweet content
           </a>
         )}
-        <p className=" text-lg m-3 lg:max-w-[500px] text-center text-white font-extrabold ">
+        <p className=" bg-gray-500 rounded-md z-[99] p-3 text-lg m-3 lg:max-w-[500px] text-center text-white font-extrabold ">
           Make sure to follow our account to enable you generate code for the
           next stage
         </p>

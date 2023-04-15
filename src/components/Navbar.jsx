@@ -1,8 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
+import { Sedgwick_Ave_Display } from "next/font/google";
 
 import Link from "next/link";
+
+const sedSedgwick = Sedgwick_Ave_Display({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,16 +18,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 ">
+    <nav className="sticky top-0 z-[9999] ">
       <div className="flex items-center  justify-between max-w-screen-xl px-6 py-4 mx-auto md:p-12">
-        <div>
-          <Image
-            src="/invadersLogo.jpg"
-            alt="bg"
-            width={500}
-            height={500}
-            className="w-[10%] rounded-full "
-          />
+        <div className={` ${sedSedgwick.className} text-4xl text-white`}>
+          TheInvaderz
         </div>
 
         <div className="hidden font-mono text-3xl z-[99999] md:block">

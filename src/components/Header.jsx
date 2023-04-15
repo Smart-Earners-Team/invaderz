@@ -33,33 +33,16 @@ const Header = () => {
         > */}
         <TitleText
           title={<>TheInvaderz</>}
-          className={`${authour.className} mb-5 text-2xl font-extrabold lg:text-8xl lg:ml-[10px] shrink-0`}
+          className={`${authour.className} mb-5 text-2xl font-extrabold lg:text-8xl lg:ml-[10px] z-[101] shrink-0`}
         />
         <span
-          className={`${authour.className} lg:max-w-[500px]   lg:ml-[10px] text-sm `}
+          className={`${authour.className} lg:max-w-[500px]   lg:ml-[10px] text-sm z-[101] `}
         >
           The Invaderz NFT project is a unique and interactive concept that
           places the power of storytelling in the hands of the NFT holders. The
           project consists of a series of NFTs that each represent a different
           character or aspect of the alien invasion narrative.
         </span>
-
-        <motion.div
-          variants={slideIn("left", "tween", 0.2, 5)}
-          className=" absolute lg:w-[20%] w-[70%] left-0 lg:top-[280px] top-[150px]"
-        >
-          <TitleText
-            title={
-              <Image
-                src="/sides/about2.png"
-                alt="ghost"
-                width={1000}
-                height={1000}
-                className=" absolute opacity-70"
-              />
-            }
-          />
-        </motion.div>
       </div>
     </motion.div>
   );
