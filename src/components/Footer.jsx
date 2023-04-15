@@ -3,14 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className=" relative flex flex-col items-center justify-center h-[60vh] text-white">
-      <Image
-        src="/bg/bg-footer.webp"
-        alt="Twitter"
-        width={1000}
-        height={1000}
-        className=" absolute w-[100%] object-cover z-[-99999] opacity-50  "
-      />
+    <div className=" relative bg-bg-imgfooter object-contain flex flex-col items-center justify-center h-[50vh] text-white">
       <p className=" lg:text-5xl text-2xl font-bold mb-5">The Invaderz</p>
       <p className=" mx-5 text-center max-w-3xl z-[99] ">
         The Invaderz NFT project represents a groundbreaking new approach to

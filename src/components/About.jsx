@@ -19,7 +19,7 @@ const About = () => {
       whileInView="show"
       viewport={{ once: "false", amount: 0.25 }}
     >
-      <div className="  flex flex-col justify-center  text-black  lg:px-12 px-5 pt-6 lg:pt-[100px] bg-bg-imgAbout object-contain">
+      <div className="  flex flex-col justify-center z-[-9999]  text-black  lg:px-12 px-5 pt-6 lg:pt-[100px] bg-bg-imgAbout object-contain">
         <span></span>
         <TitleText
           title={<>About TheInvaderz</>}

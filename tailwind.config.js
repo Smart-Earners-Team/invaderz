@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "bg-imgAbout": "url('/bg/bg-home.jpg')",
-        // "bg-img1": "url('/aboutBg.png')",
+        "bg-imgfooter": "url('/bg/bg-footer.webp')",
         // "bg-img2": "url('/howitwork.png')",
         // "bg-img3": "url('/benefitBg.png')",
       },

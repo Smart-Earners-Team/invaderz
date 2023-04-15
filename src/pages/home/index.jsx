@@ -39,7 +39,7 @@ export default function Home() {
                 alt="Twitter"
                 width={1000}
                 height={1000}
-                className=" absolute w-[100%] object-cover z-[-99999]  "
+                className=" absolute w-[100%] object-cover z-[-91]  "
               />
               <Header />
             </div>
