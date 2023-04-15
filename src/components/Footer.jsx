@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-bg-imgfooter top-0 left-0 w-full bg-cover h-screen flex flex-col items-center justify-center text-white">
+    <footer className="relative bg-bg-imgfooter  w-full bg-cover h-screen flex flex-col items-center justify-center text-white">
       <p className="lg:text-5xl text-2xl font-bold mb-5">The Invaderz</p>
       <p className="mx-5 text-center max-w-3xl z-[99]">
         The Invaderz NFT project represents a groundbreaking new approach to

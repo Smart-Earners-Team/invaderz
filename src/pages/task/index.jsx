@@ -31,7 +31,7 @@ export default function Task() {
       <main>
         <Layout>
           <Image
-            src="/bg/bg-task.png"
+            src="/bg/bg-task.jpg"
             alt="Twitter"
             width={1000}
             height={1000}
