@@ -52,7 +52,7 @@ const Header = () => {
             title={
               <Image
                 src="/sides/about2.png"
-                alt="Twitter"
+                alt="ghost"
                 width={1000}
                 height={1000}
                 className=" absolute opacity-70"

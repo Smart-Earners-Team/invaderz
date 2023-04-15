@@ -36,8 +36,8 @@ export default function Home() {
             {" "}
             <div className="relative">
               <Image
-                src="/bg/bg-home.jpg"
-                alt="Twitter"
+                src="/bg/home.jpg"
+                alt="home"
                 width={1000}
                 height={1000}
                 className="absolute top-0 left-0 w-full h-full object-cover z-[-91]"
