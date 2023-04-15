@@ -9,7 +9,7 @@ const Footer = () => {
         alt="Twitter"
         width={1000}
         height={1000}
-        className=" absolute w-[100%] h-[80vh]  object-cover z-[-99999] opacity-50  "
+        className=" absolute w-[100%] object-cover z-[-99999] opacity-50  "
       />
       <p className=" lg:text-5xl text-2xl font-bold mb-5">The Invaderz</p>
       <p className=" mx-5 text-center max-w-3xl z-[99] ">

@@ -19,14 +19,14 @@ const About = () => {
       whileInView="show"
       viewport={{ once: "false", amount: 0.25 }}
     >
-      <div className=" relative flex flex-col justify-center items-end text-black  lg:px-12 px-5 pt-6 lg:pt-[100px]">
+      <div className="  flex flex-col justify-center  text-black  lg:px-12 px-5 pt-6 lg:pt-[100px] bg-bg-imgAbout object-contain">
         <span></span>
         <TitleText
           title={<>About TheInvaderz</>}
           className={`${authour.className} text-white mb-5 text-2xl mx-auto lg:mx-0 font-extrabold lg:text-5xl lg:ml-[50px] shrink-0`}
         />
         <span
-          className={`${authour.className} text-white z-[99] lg:max-w-[800px] lg:text-md lg:mt-[20px] h-fit text-center mb-3`}
+          className={`${authour.className} text-white z-[99] lg:max-w-[800px] lg:text-md  h-fit text-center `}
         >
           As the story progresses, the NFT holders will have the opportunity to
           vote on different choices that will affect the direction of the
@@ -46,7 +46,7 @@ const About = () => {
         </span>
 
         <div>
-          <TitleText
+          {/* <TitleText
             title={
               <Image
                 src="/sides/tweet2.png"
@@ -57,7 +57,7 @@ const About = () => {
               />
             }
             className="absolute lg:w-[40%] top-[180px] w-[100%] left-[0%] lg:left-[27%]  "
-          />
+          /> */}
         </div>
       </div>
     </motion.div>

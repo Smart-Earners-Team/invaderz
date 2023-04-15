@@ -33,17 +33,17 @@ export default function Home() {
       <main>
         <Layout>
           <div className=" ">
-            <Image
-              src="/bg/bg-home.jpg"
-              alt="Twitter"
-              width={1000}
-              height={1000}
-              className=" absolute w-[100%] h-[250vh]  object-cover z-[-99999]  "
-            />
-            <div className="">
+            <div className=" relative">
+              <Image
+                src="/bg/bg-home.jpg"
+                alt="Twitter"
+                width={1000}
+                height={1000}
+                className=" absolute w-[100%] object-cover z-[-99999]  "
+              />
               <Header />
             </div>
-            <div className="">
+            <div className="relative ">
               <About />
             </div>
             <div className="">

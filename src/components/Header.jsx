@@ -26,7 +26,7 @@ const Header = () => {
       viewport={{ once: "false", amount: 0.25 }}
     >
       <Navbar />
-      <div className=" flex flex-col lg:pt-[50px] pt-12 lg:pb-[200px] pb-[100px] text-white  px-5 lg:px-[50px] lg:ml-[100px]">
+      <div className=" flex flex-col lg:pt-[50px] pt-12 lg:pb-[200px]  text-white  px-5 lg:px-[50px] lg:ml-[100px]">
         {/* <motion.div
           variants={slideIn("left", "tween", 0.2, 3)}
           className="relative w-full md:-mt-[20px] -mt[12px] "
@@ -36,7 +36,7 @@ const Header = () => {
           className={`${authour.className} mb-5 text-xl font-extrabold lg:text-8xl lg:ml-[10px] shrink-0`}
         />
         <span
-          className={`${authour.className} lg:max-w-[800px] lg:mt-[20px] lg:ml-[10px] text-sm mt-5`}
+          className={`${authour.className} lg:max-w-[800px]  lg:ml-[10px] text-sm `}
         >
           The Invaderz NFT project is a unique and interactive concept that
           places the power of storytelling in the hands of the NFT holders. The
