@@ -32,20 +32,23 @@ const Mint = () => {
   };
   return (
     <Layout>
-      <div className=" bg-bg-mint w-full h-screen bg-cover bg-no-repeat">
+      <div className="w-full h-screen bg-no-repeat bg-cover bg-bg-mint">
         <Navbar />
         <p
-          className={` ${authour.className} mx-auto mt-5 lg:text-9xl text-5xl text-center text-white `}
+          className={` ${authour.className} mx-auto  lg:text-9xl text-5xl text-center text-white `}
         >
           Coming Soon
         </p>
-        <div className=" flex flex-col lg:pt-[100px] pt-10 text-white p-5 text-xl   lg:px-[80px]">
-          <span className=" lg:max-w-[300px] text-center lg:mt-[30px]">
+        <div className=" flex flex-col gap-3 items-center justify-center mt-[50px]  pt-10 text-white p-5 text-xl   ">
+          <span className=" max-w-[300px] text-center ">
             Be the first to know when we launch our minting page by following us
             on Twitter
           </span>
-          <div className="bg-blue-900 rounded-lg mx-auto lg:ml-[50px] p-5 px-10 w-fit m-5">
-            Follow
+          <div className="p-5 px-10 mx-auto mb-16 bg-blue-900 rounded-lg w-fit">
+            <a href="https://twitter.com" target="_blank">
+              {" "}
+              Follow
+            </a>
           </div>
         </div>
 

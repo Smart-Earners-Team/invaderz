@@ -12,8 +12,8 @@ const Footer = () => {
       whileInView="show"
       viewport={{ once: "false", amount: 0.25 }}
     >
-      <footer className="relative bg-bg-imgfooter  w-full bg-cover h-screen flex flex-col items-center justify-center text-white">
-        <p className="lg:text-8xl text-4xl font-bold mb-5">The Invaderz</p>
+      <footer className="relative flex flex-col items-center justify-center w-full h-screen text-white bg-cover bg-bg-imgfooter">
+        <p className="mb-5 text-4xl font-bold lg:text-8xl">The Invaderz</p>
         <p className="mx-5 text-center max-w-3xl z-[99]">
           The Invaderz NFT project represents a groundbreaking new approach to
           storytelling and NFT collectibles, and is sure to be an intriguing and
@@ -21,27 +21,15 @@ const Footer = () => {
         </p>
 
         <div className="flex items-center justify-center gap-5 mt-32 z-[99] opacity-70  ">
-          <Image
-            src="/Discord.png"
-            alt="Discord"
-            width={500}
-            height={500}
-            className="lg:w-[30%] w-[30%]"
-          />
-          <Image
-            src="/Telegram.png"
-            alt="Telegram"
-            width={500}
-            height={500}
-            className="lg:w-[30%] w-[30%] "
-          />
-          <Image
-            src="/Twitter1.png"
-            alt="Twitter"
-            width={500}
-            height={500}
-            className="lg:w-[30%] w-[30%] "
-          />
+          <a href="https://twitter.com" target="_blank">
+            <Image
+              src="/Twitter1.png"
+              alt="Twitter"
+              width={500}
+              height={500}
+              className="lg:w-[90%] w-[70%]"
+            />
+          </a>
         </div>
         <div>
           <motion.div
