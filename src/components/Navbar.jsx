@@ -19,10 +19,8 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-[9999] ">
-      <div className="flex items-center  justify-between max-w-screen-xl px-6 py-4 mx-auto md:p-12">
-        <div className={` ${sedSedgwick.className} text-4xl text-white`}>
-          TheInvaderz
-        </div>
+      <div className="flex items-center justify-between max-w-screen-xl px-6 py-4 mx-auto md:p-12">
+        <div className={` ${sedSedgwick.className} text-4xl text-white`}></div>
 
         <div className="hidden font-mono text-3xl z-[99999] md:block">
           <div className="flex flex-col items-center gap-4 ">
@@ -49,7 +47,7 @@ const Navbar = () => {
 
         <div className="md:hidden">
           <button
-            className="p-1  text-gray-400 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+            className="p-1 text-gray-400 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
             onClick={toggleNav}
           >
             <span className="sr-only">Open main menu</span>
@@ -77,19 +75,19 @@ const Navbar = () => {
         <div className="flex flex-col bg-gray-500 text-white hover:bg-black items-center mx-auto rounded-lg ring-2 ring-white justify-center px-2 pt-2 pb-3 mr-10 space-y-1 border w-[60%] sm:px-3">
           <Link
             href="/home"
-            className="block px-3 py-2 text-base font-medium  rounded-md "
+            className="block px-3 py-2 text-base font-medium rounded-md "
           >
             Home
           </Link>
           <Link
             href="/task"
-            className="block px-3 py-2 text-base font-medium  rounded-md "
+            className="block px-3 py-2 text-base font-medium rounded-md "
           >
             WhiteList
           </Link>
           <Link
             href="/mint"
-            className="block px-3 py-2 text-base font-medium  rounded-md "
+            className="block px-3 py-2 text-base font-medium rounded-md "
           >
             Mint
           </Link>

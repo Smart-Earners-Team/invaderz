@@ -28,7 +28,7 @@ const Header = () => {
         > */}
         <TitleText
           title={<>TheInvaderz</>}
-          className={`${rock.className} mb-5 text-xl font-extrabold lg:text-8xl lg:ml-[20px] shrink-0`}
+          className={`${rock.className}  z-[99] mb-5 text-xl font-extrabold lg:text-8xl lg:ml-[20px] shrink-0`}
         />
         <span
           className={`${rock.className} z-[99] lg:max-w-[800px] lg:mt-[20px] lg:ml-[10px] text-sm mt-5 p-2 `}
@@ -50,7 +50,7 @@ const Header = () => {
                 alt="Ghost"
                 width={1000}
                 height={1000}
-                className=" absolute"
+                className="absolute "
               />
             }
           />
