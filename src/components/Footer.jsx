@@ -21,7 +21,7 @@ const Footer = () => {
         </p>
 
         <div className="flex items-center justify-center gap-5 mt-32 z-[99] opacity-70  ">
-          <a href="https://twitter.com" target="_blank">
+          <a href="https://twitter.com/TheInvaderz_" target="_blank">
             <Image
               src="/Twitter1.png"
               alt="Twitter"

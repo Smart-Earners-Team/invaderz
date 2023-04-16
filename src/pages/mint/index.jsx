@@ -45,7 +45,7 @@ const Mint = () => {
             on Twitter
           </span>
           <div className="p-5 px-10 mx-auto mb-16 bg-blue-900 rounded-lg w-fit">
-            <a href="https://twitter.com" target="_blank">
+            <a href="https://twitter.com/TheInvaderz_" target="_blank">
               {" "}
               Follow
             </a>
