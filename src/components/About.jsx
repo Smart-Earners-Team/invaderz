@@ -19,7 +19,7 @@ const About = () => {
       whileInView="show"
       viewport={{ once: "false", amount: 0.25 }}
     >
-      <div className=" relative bg-bg-about flex flex-col justify-center z-[50]  text-black  lg:px-12 px-5 pt-6 lg:pt-[100px] object-contain">
+      <div className=" relative bg-bg-about flex flex-col justify-center text-black  lg:px-12 px-5 pt-6 lg:pt-[100px] object-contain">
         <span></span>
         <TitleText
           title={<>About TheInvaderz</>}
@@ -59,7 +59,7 @@ const About = () => {
         <div>
           <motion.div
             variants={slideIn("left", "tween", 0.2, 3)}
-            className=" absolute lg:w-[50%] w-[100%] right-0 lg:top-[100px] top-[150px] z-[90]"
+            className=" absolute lg:w-[50%] w-[100%] right-0 lg:top-[100px] top-[150px] "
           >
             <TitleText
               title={
@@ -68,7 +68,7 @@ const About = () => {
                   alt="ghost"
                   width={1000}
                   height={1000}
-                  className="  opacity-80"
+                  className=" opacity-80"
                 />
               }
             />

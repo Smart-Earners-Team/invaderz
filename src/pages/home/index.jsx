@@ -48,7 +48,7 @@ export default function Home() {
                 alt="home"
                 width={1000}
                 height={1000}
-                className="absolute top-0 left-0 w-full h-full object-cover z-[99]"
+                className="absolute top-0 left-0 object-cover w-full h-full "
               />
               <Header />
             </div>
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
             <motion.div
               variants={slideIn("left", "tween", 0.2, 5)}
-              className="z-[105] absolute lg:w-[20%] w-[70%] left-0 lg:top-[280px] top-[150px]  "
+              className=" absolute lg:w-[20%] w-[70%] left-0 lg:top-[280px] top-[150px]  "
             >
               <TitleText
                 title={
@@ -74,7 +74,7 @@ export default function Home() {
                     alt="ghost"
                     width={1000}
                     height={1000}
-                    className=" opacity-60  "
+                    className=" z-[90]"
                   />
                 }
               />
